@@ -4,7 +4,7 @@ A short series of tasks for the first ORR coding club
 # Reposity contents #2
 This project contains one R script and one csv. The R script contains the code to generate the dummy data and the questions for the coding challenge. The dummy data (task1.csv) contains the data to which the questions relate. The script can be found in the script folder, while the data can be found in the data folder.
 
-The data contains three columns. These three columns contain data on the name (ordered Surname, First name),  number of ice creams eaten anually and a favorite seabird for each row. There are no NA values. This is simulated data, but for the sake of immersion:
+The data contains three columns. These three columns contain data on the name (ordered Surname, First name),  number of ice creams eaten anually and a favorite seabird for each row. There are no NA values. This is simulated data, but for the sake of immersion:<br>
 This data was gathered by surveying 2,500,000 people across the world on thier ice cream consumption and favorite UK seabird. The person who collected this data needs to answer a series of questions before the next coding club session, as the Minister for Birds and Icecream is on a tight deadline.
 
 # Question guidence #3
