@@ -18,7 +18,7 @@ here()
 set.seed(4736)
 
 #Set the length of the data. The practice data set 
-datalength<-2000000
+datalength<-2500000
 
 #Generate a list of names using the randomNames package
 name<-c(randomNames(datalength, gender=c(1:2), ethnicity=c(1:5)))
