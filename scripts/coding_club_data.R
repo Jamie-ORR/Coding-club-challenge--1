@@ -81,6 +81,12 @@ paste("There were",peoplenumber,"people surveyed")
 #7#What was the name of the person who ate the most ice creams of those who liked the Sandwich tern?
 
 
-#8#Ordered alphabetically, by first surname, who comes 89,576th
+#8#Ordered alphabetically, by first name, who comes 89,576th?
+
+
+#9#How many names contained the exact sting of letters "ame" at some point in their names (continuous string with no breaks)?
+
+
+#10#Of those people with "ame" in their name, how many chose the Red-throated diver and ate greater than 8000 ice creams?
 
 
