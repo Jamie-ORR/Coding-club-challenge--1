@@ -19,34 +19,34 @@ Each of the questions can be found in the R script or .txt file, but they are al
 
 
 
-#1#How many people ate less than 50 ice creams?
+#Task questions#
 
+#1#How many people ate less than 50 ice creams?
 
 
 #2#How many people chose a puffin as their favorite seabird?
 
 
-
 #3#How many people chose a Kittiwake as their favorite seabird and ate over 7000 ice creams?
-
 
 
 #4#How many people had first names starting with P?
 
 
-
 #5#How many people had second names starting with A?
-
 
 
 #6#How many people had double barreled surnames (contains a -)?
 
 
-
 #7#What was the name of the person who ate the most ice creams of those who liked the Sandwich tern?
 
 
+#8#Ordered alphabetically, by first name, who comes 89,576th?
 
-#8#Ordered alphabetically, by first name, who comes 89,576th
 
+#9#How many names contained the exact sting of letters "ame" at some point in their names (continuous string with no breaks)?
+
+
+#10#Of those people with "ame" in their name, how many chose the Red-throated diver and ate greater than 8000 ice creams?
 
