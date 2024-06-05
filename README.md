@@ -47,6 +47,6 @@ Each of the questions can be found in the R script or .txt file, but they are al
 
 
 
-#8#Ordered alphabetically, by first surname, who comes 89,576th
+#8#Ordered alphabetically, by first name, who comes 89,576th
 
 
