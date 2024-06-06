@@ -2,7 +2,7 @@
 A short series of tasks for the first ORR coding club
  
 # Reposity contents #2
-This project contains one R script and one csv and one <b>txt<b> file. The R script contains the code to generate the dummy data and the questions for the coding challenge. The dummy data (task1.csv) contains the data to which the questions relate. The txt file  contains another copy of the questions. The script to generate the dummy data can be found in the script folder, while the data can be found in the data folder. The txt with the questions can be found in the root directory.
+This project contains one R script and one csv and one <b>txt</b> file. The R script contains the code to generate the dummy data and the questions for the coding challenge. The dummy data (task1.csv) contains the data to which the questions relate. The txt file  contains another copy of the questions. The script to generate the dummy data can be found in the script folder, while the data can be found in the data folder. The txt with the questions can be found in the root directory.
 
 # Question guidence #3
 Each question must be answered with a sentence. You can use as much code as you want to process the data, but the end result must be a sentence which answers the question. See the example question and solution in the R script for an example on on what this means.
