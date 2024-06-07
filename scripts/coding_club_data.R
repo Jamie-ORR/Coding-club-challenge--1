@@ -21,7 +21,7 @@ set.seed(4736)
 datalength<-2500000
 
 #Set the length of the data. Here it is set to 10000 to make a smaller dataset
-#datalength<-10000
+#datalength<-40000
 
 #Generate a list of names using the randomNames package
 name<-c(randomNames(datalength, gender=c(1:2), ethnicity=c(1:5)))
@@ -47,8 +47,8 @@ data <- data.frame(name=name,
                    favorite_seabird=favorite_seabird)
 
 #write the dataset to the data folder (this takes a little while)
-write.csv(data, here("data", "task1_small.csv"), row.names = F)
-
+write.csv(data, here("data", "task1.csv"), row.names = F)
+#write.csv(data, here("data", "task1_small.csv"), row.names = F)
 
 
 
