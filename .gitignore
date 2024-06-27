@@ -6,6 +6,9 @@
 .RData
 .RDataTmp
 
+# Specific answer file
+coding_club_JD_answers.R
+
 # User-specific files
 .Ruserdata
 
