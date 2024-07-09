@@ -64,6 +64,13 @@ paste("There were",peoplenumber,"people surveyed")
 
 
 #Task questions#
+
+#first, read the data to the enviornment
+data<-read.csv(here("data", "task1.csv"))
+#data<-read.csv(here("data", "task1_small.csv"))
+
+
+
 #
 #1#How many people ate less than 50 ice creams?
 #
@@ -71,7 +78,12 @@ no_ice_eaters<-length(which(data$icecreams_consumed<50))
 
 paste("There were",no_ice_eaters,"people who ate less than 50 icecreams.")
 
-#"There were 0 people who ate less than 50 icecreams."
+
+
+#"There were 0 people who ate less than 50 icecreams." (SMALL DATASET)
+#"There were 0 people who ate less than 50 icecreams." (LARGE DATASET)
+#"There were 0 people who ate less than 50 icecreams." (GENERATED DATASET)
+
 
 
 #
@@ -81,7 +93,10 @@ puffin_lovers<-length(which(data$favorite_seabird=="Puffin"))
 
 paste("There were",puffin_lovers,"people who chose a puffin as their favorite seabird.")
 
-#"There were 129600 people who chose a puffin as their favorite seabird."
+#"There were 318 people who chose a puffin as their favorite seabird." (SMALL DATASET)
+#"There were 140138 people who chose a puffin as their favorite seabird." (LARGE DATASET)
+#"There were 129600 people who chose a puffin as their favorite seabird." (GENERATED DATASET)
+
 
 
 #
@@ -91,7 +106,10 @@ Kittiwake_and_icecream<-length(which(data$favorite_seabird=="Kittiwake"&data$ice
 
 paste("There were",Kittiwake_and_icecream,"people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams.")
 
-#"There were 88053 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams."
+#"There were 106 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams." (SMALL DATASET)
+#"There were 76599 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams." (LARGE DATASET)
+#"There were 88053 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams."  (GENERATED DATASET)
+
 
 
 #
@@ -105,7 +123,12 @@ How_many_P<-length(which(first_name_letter=="P"))
 
 paste("There were",How_many_P,"people who had a first name starting with P.")
 
-#"There were 42273 people who had a first name starting with P."
+#"There were 682 people who had a first name starting with P." (SMALL DATASET)
+#"There were 41785 people who had a first name starting with P." (LARGE DATASET)
+#There were 42273 people who had a first name starting with P." (GENERATED DATASET)
+
+
+
 
 
 #
@@ -117,7 +140,10 @@ How_many_A<-length(which(second_name_letter=="A"))
 
 paste("There were",How_many_A,"people who had a second name starting with A.")
 
-#"There were 303389 people who had a second name starting with A."
+#"There were 4865 people who had a second name starting with A." (SMALL DATASET)
+#"There were 304604 people who had a second name starting with A." (LARGE DATASET)
+#"There were 303389 people who had a second name starting with A." (GENERATED DATASET)
+
 
 
 #
@@ -129,7 +155,12 @@ double_barrel<- length(which(grepl("-", secondnames, fixed = TRUE)))
 
 paste("There were",double_barrel,"people who had a double barreled surname.")
 
-#"There were 70941 people who had a double barreled surname."
+#"There were 1166 people who had a double barreled surname." (SMALL DATASET)
+#"There were 70971 people who had a double barreled surname." (LARGE DATASET)
+#"There were 70941 people who had a double barreled surname." (GENERATED DATASET)
+
+
+
 
 
 #
@@ -141,7 +172,10 @@ icecream_tern_fan<-data$name[data$favorite_seabird=="Sandwich tern"][
 
 paste0("The person who ate the most ice creams who likes sandwich terns was ",icecream_tern_fan,".")
 
-#"The person who ate the most ice creams who likes sandwich terns was Blackwater, Patrick."
+#"The person who ate the most ice creams who likes sandwich terns was Pervishko, Dante." (SMALL DATASET)
+#"The person who ate the most ice creams who likes sandwich terns was Wright, Brandon." (LARGE DATASET)
+#"The person who ate the most ice creams who likes sandwich terns was Blackwater, Patrick." (GENERATED DATASET)
+
 
 
 #
@@ -156,7 +190,9 @@ name_ordered<-reversename[order(reversename)][whichindividual]
 paste0("The individual at position ",whichindividual, " when ordered alphabetically is ",name_ordered,".")
 
 
-#"The individual at position 89576 when ordered alphabetically is Alexia, Nguyen."
+#"The individual at position 89576 when ordered alphabetically is Alexandrina, Lindgren." (LARGE DATASET)
+#"The individual at position 89576 when ordered alphabetically is Alexia, Nguyen." (GENERATED DATASET)
+
 
 
 #
@@ -167,7 +203,11 @@ ame_name<- length(which(grepl("ame", data$name, fixed = TRUE)))
 
 cat(paste(ame_name, "people had the letters \"ame\" in their name."))#note the cat function is concatenate and print. We use this to remove the \ escape character.
 
-#24882 people had the letters "ame" in their name.
+#450 people had the letters "ame" in their name. (SMALL DATASET)
+#25209 people had the letters "ame" in their name. (LARGE DATASET)
+#24882 people had the letters "ame" in their name. (GENERATED DATASET)
+
+
 
 
 
@@ -180,5 +220,9 @@ how_many_ice_dive <- nrow(subset[subset$favorite_seabird=="Red-throated diver"&s
 
 cat(paste(how_many_ice_dive, "people had the letters \"ame\" in their name, liked RTDs and ate over 8000 icecreams."))#note the cat function is concatenate and print. We use this to remove the \ escape character.
 
-#40 people had the letters "ame" in their name, liked RTDs and ate over 8000 icecreams..
 
+
+
+#0 people had the letters "ame" in their name, liked RTDs and ate over 8000 icecreams. (SMALL DATASET)
+#275 people had the letters "ame" in their name, liked RTDs and ate over 8000 icecreams. (LARGE DATASET)
+# (GENERATED DATASET)
