@@ -9,6 +9,7 @@ here::i_am("scripts/coding_club_data.R")
 #load libraries
 library(here)
 library(randomNames)
+library(stringr)
 
 #show the working directory
 here()
@@ -115,7 +116,10 @@ paste("There were",Kittiwake_and_icecream,"people who chose a kittiwake as their
 #
 #4#How many people had first names starting with P?
 #
+#This answer assumes the first name is always the name after the first comma and ignores any name after a second comma.
 firstnames<-sapply(strsplit(as.character(data$name), ", "), "[[", 2) #get a list of just first names. where we extract names after the comma and space.
+
+sapply(data$name, tail, 1)
 
 first_name_letter<-substr(firstnames,0,1)
 
@@ -134,15 +138,15 @@ paste("There were",How_many_P,"people who had a first name starting with P.")
 #
 #5#How many people had second names starting with A?
 #
-second_name_letter<-substr(firstnames,0,1)
+second_name_letter<-substr(data$name,0,1)
 
 How_many_A<-length(which(second_name_letter=="A"))
 
 paste("There were",How_many_A,"people who had a second name starting with A.")
 
-#"There were 4865 people who had a second name starting with A." (SMALL DATASET)
-#"There were 304604 people who had a second name starting with A." (LARGE DATASET)
-#"There were 303389 people who had a second name starting with A." (GENERATED DATASET)
+#"There were 1702 people who had a second name starting with A." (SMALL DATASET)
+#"There were 110715 people who had a second name starting with A." (LARGE DATASET)
+#"There were 110807 people who had a second name starting with A." (GENERATED DATASET)
 
 
 
@@ -181,6 +185,7 @@ paste0("The person who ate the most ice creams who likes sandwich terns was ",ic
 #
 #8#Ordered alphabetically, by first name, who comes 89,576th?
 #
+#this answer ignores any additional names after a second comma.
 whichindividual<-89576
 
 reversename<-paste0(sapply(strsplit(as.character(data$name), ", "), "[[", 2),", ", sapply(strsplit(as.character(data$name), ", "), "[[", 1))
