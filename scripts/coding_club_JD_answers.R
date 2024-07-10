@@ -53,6 +53,9 @@ data <- data.frame(name=name,
 
 
 
+
+
+
 #Example Question#
 
 #How many people were surveyed?
@@ -72,6 +75,8 @@ data<-read.csv(here("data", "task1.csv"))
 
 
 
+
+
 #
 #1#How many people ate less than 50 ice creams?
 #
@@ -84,6 +89,11 @@ paste("There were",no_ice_eaters,"people who ate less than 50 icecreams.")
 #"There were 0 people who ate less than 50 icecreams." (SMALL DATASET)
 #"There were 0 people who ate less than 50 icecreams." (LARGE DATASET)
 #"There were 0 people who ate less than 50 icecreams." (GENERATED DATASET)
+
+
+
+
+
 
 
 
@@ -100,6 +110,13 @@ paste("There were",puffin_lovers,"people who chose a puffin as their favorite se
 
 
 
+
+
+
+
+
+
+
 #
 #3#How many people chose a Kittiwake as their favorite seabird and ate over 7000 ice creams?
 #
@@ -113,13 +130,17 @@ paste("There were",Kittiwake_and_icecream,"people who chose a kittiwake as their
 
 
 
+
+
+
+
+
+
 #
 #4#How many people had first names starting with P?
 #
 #This answer assumes the first name is always the name after the first comma and ignores any name after a second comma.
 firstnames<-sapply(strsplit(as.character(data$name), ", "), "[[", 2) #get a list of just first names. where we extract names after the comma and space.
-
-sapply(data$name, tail, 1)
 
 first_name_letter<-substr(firstnames,0,1)
 
@@ -135,9 +156,15 @@ paste("There were",How_many_P,"people who had a first name starting with P.")
 
 
 
+
+
+
+
+
 #
 #5#How many people had second names starting with A?
 #
+#This answer assumes the name before the first comma is the surname.
 second_name_letter<-substr(data$name,0,1)
 
 How_many_A<-length(which(second_name_letter=="A"))
@@ -147,6 +174,12 @@ paste("There were",How_many_A,"people who had a second name starting with A.")
 #"There were 1702 people who had a second name starting with A." (SMALL DATASET)
 #"There were 110715 people who had a second name starting with A." (LARGE DATASET)
 #"There were 110807 people who had a second name starting with A." (GENERATED DATASET)
+
+
+
+
+
+
 
 
 
@@ -167,6 +200,10 @@ paste("There were",double_barrel,"people who had a double barreled surname.")
 
 
 
+
+
+
+
 #
 #7#What was the name of the person who ate the most ice creams of those who liked the Sandwich tern?
 #
@@ -179,6 +216,11 @@ paste0("The person who ate the most ice creams who likes sandwich terns was ",ic
 #"The person who ate the most ice creams who likes sandwich terns was Pervishko, Dante." (SMALL DATASET)
 #"The person who ate the most ice creams who likes sandwich terns was Wright, Brandon." (LARGE DATASET)
 #"The person who ate the most ice creams who likes sandwich terns was Blackwater, Patrick." (GENERATED DATASET)
+
+
+
+
+
 
 
 
@@ -200,6 +242,11 @@ paste0("The individual at position ",whichindividual, " when ordered alphabetica
 
 
 
+
+
+
+
+
 #
 #9#How many names contained the exact sting of letters "ame" at some point in their names (continuous string with no breaks)?
 #
@@ -216,6 +263,11 @@ cat(paste(ame_name, "people had the letters \"ame\" in their name."))#note the c
 
 
 
+
+
+
+
+
 #
 #10#Of those people with "ame" in their name, how many chose the Red-throated diver and ate greater than 8000 ice creams?
 #
@@ -224,8 +276,6 @@ subset <- data[which(grepl("ame", data$name, fixed = TRUE)),]
 how_many_ice_dive <- nrow(subset[subset$favorite_seabird=="Red-throated diver"&subset$icecreams_consumed>8000,])
 
 cat(paste(how_many_ice_dive, "people had the letters \"ame\" in their name, liked RTDs and ate over 8000 icecreams."))#note the cat function is concatenate and print. We use this to remove the \ escape character.
-
-
 
 
 #0 people had the letters "ame" in their name, liked RTDs and ate over 8000 icecreams. (SMALL DATASET)
