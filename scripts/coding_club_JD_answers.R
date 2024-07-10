@@ -120,13 +120,13 @@ paste("There were",puffin_lovers,"people who chose a puffin as their favorite se
 #
 #3#How many people chose a Kittiwake as their favorite seabird and ate over 7000 ice creams?
 #
-Kittiwake_and_icecream<-length(which(data$favorite_seabird=="Kittiwake"&data$icecreams_consumed>50))
+Kittiwake_and_icecream<-length(which(data$favorite_seabird=="Kittiwake"&data$icecreams_consumed>7000))
 
 paste("There were",Kittiwake_and_icecream,"people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams.")
 
 #"There were 106 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams." (SMALL DATASET)
-#"There were 76599 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams." (LARGE DATASET)
-#"There were 88053 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams."  (GENERATED DATASET)
+#"There were 38303 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams." (LARGE DATASET)
+#"There were 43947 people who chose a kittiwake as their favorite seabird and ate over 7,000 icecreams."  (GENERATED DATASET)
 
 
 
@@ -172,7 +172,7 @@ How_many_A<-length(which(second_name_letter=="A"))
 paste("There were",How_many_A,"people who had a second name starting with A.")
 
 #"There were 1702 people who had a second name starting with A." (SMALL DATASET)
-#"There were 110715 people who had a second name starting with A." (LARGE DATASET)
+#"There were 110,715 people who had a second name starting with A." (LARGE DATASET)
 #"There were 110807 people who had a second name starting with A." (GENERATED DATASET)
 
 
@@ -230,7 +230,9 @@ paste0("The person who ate the most ice creams who likes sandwich terns was ",ic
 #this answer ignores any additional names after a second comma.
 whichindividual<-89576
 
-reversename<-paste0(sapply(strsplit(as.character(data$name), ", "), "[[", 2),", ", sapply(strsplit(as.character(data$name), ", "), "[[", 1))
+reversename<-paste0(sapply(strsplit(as.character(data$name), ", "), "[[", 2),
+                    ", ",
+                    sapply(strsplit(as.character(data$name), ", "), "[[", 1))
 
 name_ordered<-reversename[order(reversename)][whichindividual]
 
